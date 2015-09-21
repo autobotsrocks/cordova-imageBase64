@@ -31,6 +31,7 @@
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     </config-file>
 
+    <source-file src="src/android/libs/commons-io-2.4.jar" target-dir="libs"/>
     <source-file src="src/android/com/autobots/ImageBase64.java" target-dir="src/com/autobots"/>
   </platform>
 </plugin>
