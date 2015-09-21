@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="com.autobots.cordova.imageBase64"
+  version="0.0.1">
+  <name>Image Base64 for android and ios</name>
+  <description>
+    A cordova plugin that provides the functionality to convert image to base64.
+  </description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+
+  <dependency id="cordova-plugin-file-transfer" version=">=1.2.1" />
+
+  <js-module src="www/ImageBase64.js" name="ImageBase64">
+    <clobbers target="autobots.imageBase64" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ImageBase64">
+        <param name="android-package" value="com.autobots.ImageBase64"/>
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/*">
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    </config-file>
+
+    <source-file src="src/android/com/autobots/ImageBase64.java" target-dir="src/com/autobots"/>
+  </platform>
+</plugin>
