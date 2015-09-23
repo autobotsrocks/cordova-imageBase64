@@ -20,6 +20,16 @@
     <clobbers target="autobots.imageBase64" />
   </js-module>
 
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ImageBase64">
+        <param name="ios-package" value="ImageBase64"/>
+      </feature>
+    </config-file>
+    <header-file src="src/ios/ImageBase64.h"/>
+    <source-file src="src/ios/ImageBase64.m"/>
+  </platform>
+
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="ImageBase64">
